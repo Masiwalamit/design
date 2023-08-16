@@ -40,7 +40,7 @@ class _MyHomePageState extends State<MyHomePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Icon(Icons.calendar_month, color: Colors.blue, ),
-              Text('         Book Appointment',style: TextStyle(color:Colors.black, ),)
+              Text(' Book Appointment',style: TextStyle(color:Colors.black, ),)
             ],
           ),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
@@ -61,12 +61,60 @@ class _MyHomePageState extends State<MyHomePage> {
                 Text(' Activities',style: TextStyle(color:Colors.black, ),)
               ],
             ),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35),color: Colors.transparent,),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35),color: Colors.transparent,),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35),color: Colors.transparent,),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35),color: Colors.transparent,),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35),color: Colors.transparent,),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35),color: Colors.transparent,),),
+          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
+            child:
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.shopping_bag, color: Colors.blue, ),
+                Text(' My Package',style: TextStyle(color:Colors.black, ),)
+              ],
+            ),),
+          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
+            child:
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.report_gmailerrorred_outlined, color: Colors.blue, ),
+                Text('Reports',style: TextStyle(color:Colors.black, ),)
+              ],
+            ),),
+        Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
+          child:
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.settings, color: Colors.blue, ),
+              Text('Setting',style: TextStyle(color:Colors.black, ),)
+            ],
+          ),),
+          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
+            child:
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.bookmark_border, color: Colors.blue, ),
+                Text('Book Mark',style: TextStyle(color:Colors.black, ),)
+              ],
+            ),),
+          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
+            child:
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.person_outline, color: Colors.blue, ),
+                Text('Add Member',style: TextStyle(color:Colors.black, ),)
+              ],
+            ),),
+          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
+            child:
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.newspaper_outlined, color: Colors.blue, ),
+                Text(' Report',style: TextStyle(color:Colors.black, ),)
+              ],
+            ),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35),color: Colors.transparent,),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35),color: Colors.transparent,),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35),color: Colors.transparent,),),
@@ -89,7 +137,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 
         ],
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, mainAxisSpacing: 30, crossAxisSpacing: 30),),
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, ),),
       ),
       ));
   }
