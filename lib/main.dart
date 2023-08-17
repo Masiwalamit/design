@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main(){
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: const MyHomePage(),
     );
   }
 }
@@ -30,7 +30,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar( title: Text(''),),
+      appBar: AppBar( title: const Text(''),),
       body: Container( child: Padding(
     padding: EdgeInsets.all(10),
         child: GridView(children: [
@@ -38,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
           child:
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const[
               Icon(Icons.calendar_month, color: Colors.blue, ),
               Text(' Book Appointment',style: TextStyle(color:Colors.black, ),)
             ],
