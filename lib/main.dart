@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main(){
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: const MyHomePage(),
     );
   }
 }
@@ -30,13 +30,13 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar( title: Text(''),),
-      body: Container( child: Padding(
-    padding: EdgeInsets.all(10),
-        child: GridView(children: [
+      appBar: AppBar( title: const Text(''),),
+      body: Padding(
+    padding: const EdgeInsets.all(10),
+        child: GridView(gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, ),children: [
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
           child:
-          Column(
+          const Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Icon(Icons.calendar_month, color: Colors.blue, ),
@@ -45,16 +45,16 @@ class _MyHomePageState extends State<MyHomePage> {
           ),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
             child:
-            Column(
+            const Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children:  [
                 Icon(Icons.qr_code_scanner, color: Colors.blue, ),
                 Text('Scan QR',style: TextStyle(color:Colors.black, ),)
               ],
             ),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
             child:
-            Column(
+            const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Icons.auto_graph_rounded, color: Colors.blue, ),
@@ -63,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
             child:
-            Column(
+            const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Icons.shopping_bag, color: Colors.blue, ),
@@ -72,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
             child:
-            Column(
+            const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Icons.report_gmailerrorred_outlined, color: Colors.blue, ),
@@ -81,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),),
         Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
           child:
-          Column(
+          const Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Icon(Icons.settings, color: Colors.blue, ),
@@ -90,7 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
             child:
-            Column(
+            const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Icons.bookmark_border, color: Colors.blue, ),
@@ -99,25 +99,25 @@ class _MyHomePageState extends State<MyHomePage> {
             ),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
             child:
-            Column(
+            const Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children:  [
                 Icon(Icons.wallet_rounded, color: Colors.blue, ),
                 Text('My Payment',style: TextStyle(color:Colors.black, ),)
               ],
             ),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
             child:
-            Column(
+            const Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children:  [
                 Icon(Icons.person_outline, color: Colors.blue, ),
                 Text(' Add Member',style: TextStyle(color:Colors.black, ),)
               ],
             ),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
             child:
-            Column(
+            const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Icons.square_outlined, color: Colors.blue, ),
@@ -126,43 +126,43 @@ class _MyHomePageState extends State<MyHomePage> {
             ),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
             child:
-            Column(
+            const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.shopping_bag_outlined, color: Colors.blue, ),
-                Text('Package',style: TextStyle(color:Colors.black, ),)
+                 Icon(Icons.shopping_bag_outlined, color: Colors.blue, ),
+                 Text('Package',style: TextStyle(color:Colors.black, ),)
               ],
             ),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
             child:
-            Column(
+            const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.people_outline, color: Colors.blue, ),
+                 Icon(Icons.people_outline, color: Colors.blue, ),
                 Text('Manage Queue',style: TextStyle(color:Colors.black, ),)
               ],
             ),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
             child:
-            Column(
+            const  Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.person_outline, color: Colors.blue, ),
+               Icon(Icons.person_outline, color: Colors.blue, ),
                 Text('Register Assistant',style: TextStyle(color:Colors.black, ),)
               ],
             ),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
             child:
-            Column(
+            const Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.settings, color: Colors.blue, ),
-                Text('Settings',style: TextStyle(color:Colors.black, ),)
+              children:  [
+                 Icon(Icons.settings, color: Colors.blue, ),
+                 Text('Settings',style: TextStyle(color:Colors.black, ),)
               ],
             ),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
             child:
-            Column(
+            const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Icons.feedback_outlined, color: Colors.blue, ),
@@ -171,7 +171,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
             child:
-            Column(
+            const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Icons.science_outlined, color: Colors.blue, ),
@@ -180,7 +180,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
             child:
-            Column(
+            const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Icons.medical_information, color: Colors.blue, ),
@@ -189,7 +189,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
             child:
-            Column(
+            const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Icons.people_outline, color: Colors.blue, ),
@@ -198,43 +198,43 @@ class _MyHomePageState extends State<MyHomePage> {
             ),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
             child:
-            Column(
+            const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Icons.person_outline, color: Colors.blue, ),
-                Text('Register User',style: TextStyle(color:Colors.black, ),)
+                 Text('Register User',style: TextStyle(color:Colors.black, ),)
               ],
             ),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
             child:
-            Column(
+            const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.shopping_bag_outlined, color: Colors.blue, ),
-                Text('Package',style: TextStyle(color:Colors.black, ),)
+                 Icon(Icons.shopping_bag_outlined, color: Colors.blue, ),
+                 Text('Package',style: TextStyle(color:Colors.black, ),)
               ],
             ),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
             child:
-            Column(
+             Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
+              children:  [
                 Icon(Icons.feedback_outlined, color: Colors.blue, ),
-                Text('Feedback',style: TextStyle(color:Colors.black, ),)
+                Text('Feedback',style: const TextStyle(color:Colors.black, ),)
               ],
             ),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
             child:
-            Column(
+            const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.newspaper, color: Colors.blue, ),
-                Text('Panel',style: TextStyle(color:Colors.black, ),)
+                const Icon(Icons.newspaper, color: Colors.blue, ),
+                Text('Panel',style: const TextStyle(color:Colors.black, ),)
               ],
             ),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
             child:
-            Column(
+            const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Icon(Icons.settings, color: Colors.blue, ),
@@ -243,9 +243,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),),
 
 
-        ],
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, ),),
-      ),
+        ],),
       ));
   }
 }
