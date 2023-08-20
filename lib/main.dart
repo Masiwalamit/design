@@ -216,7 +216,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
             child:
-             Column(
+             const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children:  [
                 Icon(Icons.feedback_outlined, color: Colors.blue, ),
@@ -229,7 +229,7 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Icon(Icons.newspaper, color: Colors.blue, ),
-                Text('Panel',style: const TextStyle(color:Colors.black, ),)
+                Text('Panel',style:  TextStyle(color:Colors.black, ),)
               ],
             ),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
