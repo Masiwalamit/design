@@ -34,15 +34,12 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Padding(
     padding: const EdgeInsets.all(10),
         child: GridView(gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, ),children: [
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
-          child:
-          const Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(Icons.calendar_month, color: Colors.blue, ),
-              Text(' Book Appointment',style: TextStyle(color:Colors.black, ),)
-            ],
-          ),),
+        Container(
+          height: 80,
+          color: Colors.blueAccent,
+          padding: EdgeInsets.all(20),
+          child: Image.asset('group.png'),
+        ),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
             child:
             const Column(
@@ -165,7 +162,7 @@ class _MyHomePageState extends State<MyHomePage> {
             const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(Icons.feedback_outlined, color: Colors.blue, ),
+                 Icon(Icons.feedback_outlined, color: Colors.blue, ),
                 Text('Feedback',style: TextStyle(color:Colors.black, ),)
               ],
             ),),
@@ -220,7 +217,7 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children:  [
                 Icon(Icons.feedback_outlined, color: Colors.blue, ),
-                Text('Feedback',style: const TextStyle(color:Colors.black, ),)
+                Text('Feedback',style:  TextStyle(color:Colors.black, ),)
               ],
             ),),
           Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
@@ -228,7 +225,7 @@ class _MyHomePageState extends State<MyHomePage> {
             const Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Icon(Icons.newspaper, color: Colors.blue, ),
+                 Icon(Icons.newspaper, color: Colors.blue, ),
                 Text('Panel',style:  TextStyle(color:Colors.black, ),)
               ],
             ),),
@@ -241,7 +238,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 Text('Settings',style: TextStyle(color:Colors.black, ),)
               ],
             ),),
-
+          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
+            child:
+            const Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.textsms, color: Colors.blue, ),
+                Text('Text',style: TextStyle(color:Colors.black, ),)
+              ],
+            ),),
 
         ],),
       ));
