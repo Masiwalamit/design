@@ -1,254 +1,76 @@
 import 'package:flutter/material.dart';
 
-void main(){
-  runApp(const MyApp());
+void main() {
+  runApp(MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '',
       debugShowCheckedModeBanner: false,
+      title: 'Flutter demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const MyHomePage(),
+      home: MyHomePage(title: ''),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
-
+  const MyHomePage({super.key, required this.title});
+  final String title;
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  List<String> values = [
+    'assets/calendar.jpg',
+    'assets/scan.png',
+    'assets/activity.png',
+    'assets/package.png',
+    'assets/setting.png',
+    'assets/bookmark.png',
+    'assets/wallet.jpg',
+    'assets/add-group.png',
+    'assets/testing.png',
+    'assets/feedback.png',
+    'assets/report.png',
+    'assets/text-editor.png',
+    'assets/group.png',
+    'assets/calendar.jpg',
+    'assets/activity.png',
+    'assets/setting.png'];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar( title: const Text(''),),
-      body: Padding(
-    padding: const EdgeInsets.all(10),
-        child: GridView(gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, ),children: [
-        Container(
-          height: 80,
-          color: Colors.blueAccent,
-          padding: EdgeInsets.all(20),
-          child: Image.asset('group.png'),
+        appBar: AppBar(
+          title: Text('Design '),
         ),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
-            child:
-            const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children:  [
-                Icon(Icons.qr_code_scanner, color: Colors.blue, ),
-                Text('Scan QR',style: TextStyle(color:Colors.black, ),)
-              ],
-            ),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
-            child:
-            const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.auto_graph_rounded, color: Colors.blue, ),
-                Text(' Activities',style: TextStyle(color:Colors.black, ),)
-              ],
-            ),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
-            child:
-            const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.shopping_bag, color: Colors.blue, ),
-                Text(' My Package',style: TextStyle(color:Colors.black, ),)
-              ],
-            ),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
-            child:
-            const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.report_gmailerrorred_outlined, color: Colors.blue, ),
-                Text('Reports',style: TextStyle(color:Colors.black, ),)
-              ],
-            ),),
-        Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
-          child:
-          const Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(Icons.settings, color: Colors.blue, ),
-              Text('Setting',style: TextStyle(color:Colors.black, ),)
-            ],
-          ),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
-            child:
-            const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.bookmark_border, color: Colors.blue, ),
-                Text('Book Mark',style: TextStyle(color:Colors.black, ),)
-              ],
-            ),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
-            child:
-            const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children:  [
-                Icon(Icons.wallet_rounded, color: Colors.blue, ),
-                Text('My Payment',style: TextStyle(color:Colors.black, ),)
-              ],
-            ),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
-            child:
-            const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children:  [
-                Icon(Icons.person_outline, color: Colors.blue, ),
-                Text(' Add Member',style: TextStyle(color:Colors.black, ),)
-              ],
-            ),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
-            child:
-            const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.square_outlined, color: Colors.blue, ),
-                Text('Reports',style: TextStyle(color:Colors.black, ),)
-              ],
-            ),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
-            child:
-            const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                 Icon(Icons.shopping_bag_outlined, color: Colors.blue, ),
-                 Text('Package',style: TextStyle(color:Colors.black, ),)
-              ],
-            ),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
-            child:
-            const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                 Icon(Icons.people_outline, color: Colors.blue, ),
-                Text('Manage Queue',style: TextStyle(color:Colors.black, ),)
-              ],
-            ),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
-            child:
-            const  Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-               Icon(Icons.person_outline, color: Colors.blue, ),
-                Text('Register Assistant',style: TextStyle(color:Colors.black, ),)
-              ],
-            ),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
-            child:
-            const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children:  [
-                 Icon(Icons.settings, color: Colors.blue, ),
-                 Text('Settings',style: TextStyle(color:Colors.black, ),)
-              ],
-            ),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
-            child:
-            const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                 Icon(Icons.feedback_outlined, color: Colors.blue, ),
-                Text('Feedback',style: TextStyle(color:Colors.black, ),)
-              ],
-            ),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
-            child:
-            const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.science_outlined, color: Colors.blue, ),
-                Text('Link Laboratory',style: TextStyle(color:Colors.black, ),)
-              ],
-            ),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
-            child:
-            const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.medical_information, color: Colors.blue, ),
-                Text('Link Pharmacy',style: TextStyle(color:Colors.black, ),)
-              ],
-            ),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
-            child:
-            const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.people_outline, color: Colors.blue, ),
-                Text('Manage Queue',style: TextStyle(color:Colors.black, ),)
-              ],
-            ),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
-            child:
-            const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.person_outline, color: Colors.blue, ),
-                 Text('Register User',style: TextStyle(color:Colors.black, ),)
-              ],
-            ),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
-            child:
-            const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                 Icon(Icons.shopping_bag_outlined, color: Colors.blue, ),
-                 Text('Package',style: TextStyle(color:Colors.black, ),)
-              ],
-            ),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
-            child:
-             const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children:  [
-                Icon(Icons.feedback_outlined, color: Colors.blue, ),
-                Text('Feedback',style:  TextStyle(color:Colors.black, ),)
-              ],
-            ),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
-            child:
-            const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                 Icon(Icons.newspaper, color: Colors.blue, ),
-                Text('Panel',style:  TextStyle(color:Colors.black, ),)
-              ],
-            ),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
-            child:
-            const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.settings, color: Colors.blue, ),
-                Text('Settings',style: TextStyle(color:Colors.black, ),)
-              ],
-            ),),
-          Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(35), color: Colors.transparent,),
-            child:
-            const Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Icon(Icons.textsms, color: Colors.blue, ),
-                Text('Text',style: TextStyle(color:Colors.black, ),)
-              ],
-            ),),
+        body: Container(
+          child: GridView.builder(
+            itemCount: 16,
+            itemBuilder: (context, index) {
+              return Card(
+                elevation: 10,
+                child: Center(
+                  child: Image.asset(values[index]),
+                ),
+              );
 
-        ],),
-      ));
+            },
+            gridDelegate:
+            SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3,
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10),
+
+          ),
+        ));
   }
 }
